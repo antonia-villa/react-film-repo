@@ -5,7 +5,7 @@ class FilmListing extends Component{
 
 	render (){
 		const allFilms = this.props.films.map(film => {
-			return (<FilmRow film={film} onClick={this.props.onClick}/>)
+			return (<FilmRow film={film} clickCallback={this.props.onClick}/>)
 		})
 		return(
 			<div> 
