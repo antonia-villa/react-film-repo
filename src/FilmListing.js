@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import FilmRow from "./FilmRow.js";
 
 class FilmListing extends Component{
+
 	render (){
-		let allFilms = this.props.films.map( film => {
-			return <p>{film.title}</p>
-		});
+		const allFilms = this.props.films.map(film => {
+			return (<FilmRow film={film} onClick={this.props.onClick}/>)
+		})
 		return(
 			<div> 
-				<h1>{allFilms}</h1>
+				<h4>{allFilms}</h4>
 			</div>
 		)}
 }
